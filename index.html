@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>zk1</title>
+</head>
+<body>
+	<script>
+		// 方法一
+		var arr = ["1","2","3","4","2","1"];
+		var str = [];
+		for (i=0;i<arr.length;i++){
+            if(str.indexOf(arr[i])==-1){
+                str.unshift(arr[i]);
+            }
+        }
+		consolog.log(str)
+		// 方法二
+		var brr = ["1","2","3","4","2","1"];
+		var nums = [];
+		for(i = 0,i < brr.length, i++){
+			for(j = i+1,j < brr.length, j++){
+				if(brr[i]===brr[j]){
+					nums.push(brr[i])
+				}
+			}
+		}
+		consolog.log(nums)
+	</script>
+	
+</body>
+</html>
